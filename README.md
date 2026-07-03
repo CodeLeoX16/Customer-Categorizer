@@ -121,7 +121,6 @@ Customer-Categorizer/
 
 # 🏗️ Project Architecture
 
-> Place your architecture image inside the `flowchart/` folder.
 
 
  ![WhatsApp Image 2022-09-22 at 15 29 19](https://user-images.githubusercontent.com/71321529/192722336-54016f79-89ef-4c8c-9d71-a6e91ebab03f.jpeg)
@@ -388,7 +387,7 @@ https://github.com/CodeLeoX16
 
 **LinkedIn**
 
-https://www.linkedin.com/in/YOUR-LINKEDIN/
+[https://www.linkedin.com/in/YOUR-LINKEDIN/](https://www.linkedin.com/in/somnath-bhunia-3b300b328/)
 
 ---
 
