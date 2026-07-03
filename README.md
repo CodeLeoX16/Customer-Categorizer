@@ -124,7 +124,7 @@ Customer-Categorizer/
 > Place your architecture image inside the `flowchart/` folder.
 
 <p align="center">
-  <img src="flowchart/project_architecture.png" width="900">
+ ![WhatsApp Image 2022-09-22 at 15 29 19](https://user-images.githubusercontent.com/71321529/192722336-54016f79-89ef-4c8c-9d71-a6e91ebab03f.jpeg)
 </p>
 
 ---
@@ -132,7 +132,7 @@ Customer-Categorizer/
 # 📥 Data Collection Architecture
 
 <p align="center">
-  <img src="flowchart/data_collection_architecture.png" width="900">
+  ![WhatsApp Image 2022-09-22 at 15 29 10](https://user-images.githubusercontent.com/71321529/192721926-de265f9b-f301-4943-ac7d-948bff7be9a0.jpeg)
 </p>
 
 ---
@@ -140,7 +140,7 @@ Customer-Categorizer/
 # ☁️ Deployment Architecture
 
 <p align="center">
-  <img src="flowchart/deployment_architecture.png" width="900">
+![deployment](https://user-images.githubusercontent.com/104005791/199660875-c8e63457-432a-44cb-8a95-800870f3da15.png)
 </p>
 
 ---
