@@ -16,7 +16,7 @@ Dataset used
 </html>
 
 ###  Live Deployment Link
-**Production API Dashboard:** [https://customer-segmenter-service.onrender.com](https://customer-segmenter-service.onrender.com)
+**Production API Dashboard:** [https://customer-segmenter-service.onrender.com]([https://customer-segmenter-service.onrender.com](https://customer-categorizer-h3e6.onrender.com/))
 *(Note: App builds on Render Free Tier. If inactive, allow 45-60 seconds for the cloud container instance to spin back up).*
 
 
