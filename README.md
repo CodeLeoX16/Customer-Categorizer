@@ -1,172 +1,393 @@
+# 🛍️ Customer Categorizer - End-to-End Machine Learning Project
 
+An end-to-end **Machine Learning** application that segments customers based on their demographic and purchasing behavior using **K-Means Clustering** and predicts the customer's segment using a **Logistic Regression** classifier.
 
-# Customer Personality Segmentation
+The project implements a complete ML pipeline including data ingestion, validation, transformation, clustering, model training, evaluation, model versioning with AWS S3, MongoDB Atlas integration, Docker containerization, and deployment on Render.
 
-## Problem statement
+---
 
-Build a machine learning system which will be able predict the personality of the customer using machine learning algorithms. This project will be very usefull for malls, various stores and companies which are product based. Based on customer's personal details and purchase details, we can cluster them and we can predict the customer's cluster number using classification techniques.
+## 🚀 Live Demo
 
-## Solution Proposed
+🔗 **Application:**  
+https://customer-categorizer-h3e6.onrender.com/
 
-Now the question is how to dynamically predict the cluster of the customer ?. One of the approaches which we can use of machine learning approach, where we can cluster the customer based on the details we have and predict the cluster type based on the domain knowledge and leverage previous customer data to predict the cluster.
+> **Note:** The application is hosted on Render's Free Tier. If inactive, the first request may take **45–60 seconds** while the server starts.
 
-Dataset used
- <html>
-<a href="https://github.com/entbappy/Branching-tutorial/blob/master/marketing_campaign.zip"> Dataset Link</a>
-</html>
+---
 
-###  Live Deployment Link
-**Live Application:** [https://your-live-link.com](https://customer-categorizer-h3e6.onrender.com/)
-*(Note: App builds on Render Free Tier. If inactive, allow 45-60 seconds for the cloud container instance to spin back up).*
+## 📌 Project Overview
 
+Businesses collect a large amount of customer data but often struggle to identify meaningful customer groups.
 
+This project automatically segments customers into different categories using **unsupervised learning (K-Means Clustering)**. After generating cluster labels, a **Logistic Regression classifier** is trained to predict the customer category for new users without re-running the clustering algorithm.
 
-## Tech Stack Used
+The system enables businesses to:
 
-1. Python
-2. FastAPI
-3. Machine learning algorithms
-4. Docker
-5. MongoDB
+- Identify similar customers
+- Build targeted marketing campaigns
+- Improve customer engagement
+- Personalize recommendations
+- Increase customer retention
 
-## Infrastructure required
+---
 
-1. AWS S3
-2. Azure
-3. Github Actions
+# ✨ Features
 
-## How to run
+- End-to-End Machine Learning Pipeline
+- Customer Segmentation using K-Means
+- Customer Category Prediction
+- Automated Data Validation
+- Feature Engineering Pipeline
+- Model Evaluation
+- AWS S3 Model Storage
+- MongoDB Atlas Integration
+- Dockerized Application
+- Responsive Flask Web Application
+- Easy Deployment on Render
 
-Before you run this project make sure you have MongoDB Atlas account and you have the shipping dataset into it.
+---
 
-Step 1. Cloning the repository.
+# 🛠️ Tech Stack
 
+## Machine Learning
+
+- Scikit-learn
+- Pandas
+- NumPy
+
+## Backend
+
+- Python
+- Flask
+
+## Database
+
+- MongoDB Atlas
+
+## Cloud
+
+- AWS S3
+
+## Deployment
+
+- Docker
+- Render
+
+## Version Control
+
+- Git
+- GitHub
+
+---
+
+# 📂 Project Structure
+
+```text
+Customer-Categorizer/
+│
+├── app.py
+├── Dockerfile
+├── requirements.txt
+├── setup.py
+├── config/
+├── notebooks/
+├── src/
+│   ├── components/
+│   ├── configuration/
+│   ├── cloud_storage/
+│   ├── pipeline/
+│   ├── utils/
+│   ├── logger/
+│   ├── entity/
+│   ├── constant/
+│   └── exception/
+│
+├── templates/
+├── static/
+└── README.md
 ```
 
-git clone https://github.com/Machine-Learning-01/Customer_segmentation.git
+---
+
+# 📊 Machine Learning Workflow
 
 ```
-
-Step 2. Create a conda environment.
-
+Raw Dataset
+      │
+      ▼
+Data Ingestion
+      │
+      ▼
+Data Validation
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+K-Means Clustering
+      │
+      ▼
+Generate Cluster Labels
+      │
+      ▼
+Train Logistic Regression
+      │
+      ▼
+Model Evaluation
+      │
+      ▼
+AWS S3 Model Storage
+      │
+      ▼
+Prediction Pipeline
+      │
+      ▼
+Flask Web Application
 ```
 
-conda create --prefix venv python=3.7 -y
+---
 
+# 📈 Machine Learning Models
+
+### Clustering Model
+
+- K-Means Clustering
+
+Purpose:
+
+- Discover hidden customer groups
+- Generate customer segment labels
+
+---
+
+### Classification Model
+
+- Logistic Regression
+
+Purpose:
+
+- Predict customer segment for new customers
+- Fast inference without re-running clustering
+
+---
+
+# 📁 Dataset
+
+**Marketing Campaign Dataset**
+
+Dataset Link:
+
+https://github.com/entbappy/Branching-tutorial/blob/master/marketing_campaign.zip
+
+The dataset contains customer information such as:
+
+- Age
+- Income
+- Education
+- Marital Status
+- Purchase History
+- Campaign Responses
+- Spending Behavior
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/CodeLeoX16/Customer-Categorizer.git
 ```
 
+---
+
+## Move into Project
+
+```bash
+cd Customer-Categorizer
 ```
 
-conda activate venv/
+---
 
+## Create Conda Environment
+
+```bash
+conda create -n customer python=3.11 -y
 ```
 
-Step 3. Install the requirements
+---
 
+## Activate Environment
+
+```bash
+conda activate customer
 ```
 
+---
+
+## Install Dependencies
+
+```bash
 pip install -r requirements.txt
-
 ```
 
-Step 4. Export the environment variable
+---
+
+# 🔐 Environment Variables
+
+Create a `.env` file and configure the following variables:
+
+```env
+AWS_ACCESS_KEY_ID=YOUR_KEY
+
+AWS_SECRET_ACCESS_KEY=YOUR_SECRET
+
+AWS_DEFAULT_REGION=YOUR_REGION
+
+MONGODB_URL=YOUR_MONGODB_CONNECTION_STRING
+```
+
+---
+
+# ▶️ Run Application
 
 ```bash
-
-export AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
-
-
-export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
-
-
-export AWS_DEFAULT_REGION=<AWS_DEFAULT_REGION>
-
-
-export MONGODB_URL= <MONGODB_URL>
-
-
-```
-
-Step 5. Run the application server
-
-```
-
 python app.py
-
 ```
 
-Step 6. Train application
+Open:
 
-```bash
+```
+http://localhost:5000/
+```
 
+---
+
+# 🏋️ Train the Model
+
+```
 http://localhost:5000/train
-
 ```
 
-Step 7. Prediction application
-
-```bash
-
-http://localhost:5000/predict
-
-```
-
-## Run locally
-
-1. Check if the Dockerfile is available in the project directory
-2. Build the Docker image
-
-```
-
-docker build --build-arg AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID> --build-arg AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY> --build-arg AWS_DEFAULT_REGION=<AWS_DEFAULT_REGION> --build-arg MONGODB_URL=<MONGODB_URL> . 
-
-```
-
-3. Run the Docker image
-
-```
-
-docker run -d -p 5000:5000 <IMAGE_NAME>
-
-```
-
-## Project Architecture -
-
-![WhatsApp Image 2022-09-22 at 15 29 19](https://user-images.githubusercontent.com/71321529/192722336-54016f79-89ef-4c8c-9d71-a6e91ebab03f.jpeg)
-
-## Data Collection Architecture -
-
-![WhatsApp Image 2022-09-22 at 15 29 10](https://user-images.githubusercontent.com/71321529/192721926-de265f9b-f301-4943-ac7d-948bff7be9a0.jpeg)
-
-## Deployment Architecture -
-
-![deployment](https://user-images.githubusercontent.com/104005791/199660875-c8e63457-432a-44cb-8a95-800870f3da15.png)
-
-## Models Used
-
-* [K-Means](https://www.javatpoint.com/k-means-clustering-algorithm-in-machine-learning)
-* [LogisticRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
-
-From these above models after hyperparameter optimization we selected these two models which were K-Means for clustering and Logistic Regression for classification and used the following in Pipeline.
-
-* GridSearchCV is used for Hyperparameter Optimization in the pipeline.
-
-## `src` is the main package folder which contains
-
-**Components** : Contains all components of Machine Learning Project
+The training pipeline performs:
 
 - Data Ingestion
 - Data Validation
 - Data Transformation
-- Data Clustering
-- Model Trainer
-- Model Evaluation
-- Model Pusher
+- Feature Engineering
+- Clustering
+- Classification
+- Evaluation
+- Model Upload to AWS S3
 
-**Custom Logger and Exceptions** are used in the Project for better debugging purposes.
+---
 
-## Conclusion
+# 🔍 Predict Customer Category
 
-- This Project can be used in real-life by Users.
+```
+http://localhost:5000/predict
+```
 
+Enter customer details through the web interface and receive the predicted customer segment.
 
+---
+
+# 🐳 Docker Support
+
+## Build Docker Image
+
+```bash
+docker build \
+--build-arg AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID> \
+--build-arg AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY> \
+--build-arg AWS_DEFAULT_REGION=<AWS_DEFAULT_REGION> \
+--build-arg MONGODB_URL=<MONGODB_URL> \
+-t customer-categorizer .
+```
+
+---
+
+## Run Docker Container
+
+```bash
+docker run -p 5000:5000 customer-categorizer
+```
+
+---
+
+# ☁️ Cloud Services Used
+
+## MongoDB Atlas
+
+- Stores customer dataset
+
+## AWS S3
+
+- Stores trained models
+- Stores preprocessing objects
+- Enables model versioning
+
+---
+
+# 📷 Application Screenshots
+
+Add screenshots here after deployment.
+
+Example:
+
+```
+screenshots/
+│
+├── Home.png
+├── Prediction.png
+├── Training.png
+└── Result.png
+```
+
+Then display them:
+
+```markdown
+![Home](screenshots/Home.png)
+
+![Prediction](screenshots/Prediction.png)
+
+![Result](screenshots/Result.png)
+```
+
+---
+
+# 🚀 Future Improvements
+
+- XGBoost Classifier
+- Random Forest Classifier
+- Model Monitoring
+- MLflow Integration
+- User Authentication
+- REST API Documentation
+- Kubernetes Deployment
+- CI/CD Pipeline
+- Explainable AI using SHAP
+
+---
+
+# 👨‍💻 Author
+
+## Somnath Bhunia
+
+Computer Science Engineering Student
+
+GitHub:
+
+https://github.com/CodeLeoX16
+
+LinkedIn:
+
+https://www.linkedin.com/in/YOUR-LINKEDIN/
+
+---
+
+# ⭐ If you found this project useful
+
+Please consider giving it a ⭐ on GitHub.
+
+It helps others discover the project and motivates further improvements.
