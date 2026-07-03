@@ -1,15 +1,12 @@
 import os
 import sys
-
 import certifi
 import pymongo
-
 from src.constant.database import DATABASE_NAME
 from src.constant.env_variable import MONGODB_URL_KEY
 from src.exception import CustomerException
 
 ca = certifi.where()
-
 
 class MongoDBClient:
     client = None
@@ -25,4 +22,4 @@ class MongoDBClient:
             self.database = self.client[database_name]
             self.database_name = database_name
         except Exception as e:
-            raise CustomerException(e, sys)
+            raise CustomerException(e, sys) from e

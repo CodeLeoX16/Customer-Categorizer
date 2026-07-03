@@ -10,7 +10,163 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(19, 84, 122, 0.18), transparent 32%),
+        radial-gradient(circle at top right, rgba(64, 93, 230, 0.16), transparent 26%),
+        linear-gradient(180deg, #f5f8ff 0%, #eef3fb 100%);
+    color: #172033;
+}
+
+.prediction-page {
+    padding: 32px 0 48px;
+}
+
+.page-shell {
+    max-width: 1180px;
+}
+
+.prediction-card,
+.result-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(99, 120, 160, 0.14);
+    box-shadow: 0 24px 60px rgba(23, 32, 51, 0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+}
+
+.prediction-card {
+    padding: 28px 28px 20px;
+}
+
+.prediction-hero {
+    margin-bottom: 24px;
+}
+
+.prediction-hero .eyebrow,
+.result-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #4e658a;
+    margin-bottom: 10px;
+}
+
+.prediction-hero h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 12px !important;
+    text-transform: none;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+}
+
+.hero-copy,
+.result-summary,
+.result-meta {
+    color: #5a6780;
+    line-height: 1.6;
+}
+
+form legend {
+    font-weight: 700;
+    color: #21304a;
+    margin-bottom: 16px;
+}
+
+form .mb-3 label {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #23304a;
+    margin-bottom: 8px;
+}
+
+form .form-control,
+form select.form-control {
+    min-height: 48px;
+    border-radius: 14px;
+    border: 1px solid #d7dfec;
+    box-shadow: none;
+    padding-left: 14px;
+}
+
+form .form-control:focus,
+form select.form-control:focus {
+    border-color: #5b77ff;
+    box-shadow: 0 0 0 0.2rem rgba(91, 119, 255, 0.12);
+}
+
+.predict-btn {
+    width: 100%;
+    min-height: 52px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2447e6 0%, #17a2b8 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 18px 30px rgba(36, 71, 230, 0.24);
+}
+
+.predict-btn:hover,
+.predict-btn:focus {
+    background: linear-gradient(135deg, #1d3bc4 0%, #12899b 100%);
+    color: #fff;
+}
+
+.result-card-wrapper {
+    margin-top: 22px;
+}
+
+.result-card {
+    padding: 28px;
+}
+
+.result-title {
+    color: #1f2f52;
+    margin-bottom: 12px;
+}
+
+.result-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(36, 71, 230, 0.14), rgba(23, 162, 184, 0.14));
+    color: #20325a;
+    font-weight: 700;
+    margin: 14px 0 10px;
+}
+
+.result-reasons {
+    margin-top: 18px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    background: #f7f9ff;
+    border: 1px solid rgba(99, 120, 160, 0.14);
+}
+
+.result-subtitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #20325a;
+    margin-bottom: 12px;
+}
+
+.result-reason-line {
+    margin: 0 0 8px 0;
+    color: #5a6780;
+}
+
+.result-reason-line:last-child {
+    margin-bottom: 0;
 }
 
 .formBox {
@@ -20,7 +176,7 @@ body {
 
 h1 {
     margin: 0;
-    padding: 0;
+    padding: 0; 
     text-align: center;
     margin-bottom: 50px !important;
     text-transform: uppercase;
