@@ -1,33 +1,33 @@
 # 🛍️ Customer Categorizer - End-to-End Machine Learning Project
 
-An end-to-end **Machine Learning** application that segments customers based on their demographic and purchasing behavior using **K-Means Clustering** and predicts the customer's segment using a **Logistic Regression** classifier.
+An end-to-end **Machine Learning** application that segments customers based on demographic and purchasing behavior using **K-Means Clustering** and predicts the customer's segment using a **Logistic Regression** classifier.
 
-The project implements a complete ML pipeline including data ingestion, validation, transformation, clustering, model training, evaluation, model versioning with AWS S3, MongoDB Atlas integration, Docker containerization, and deployment on Render.
+The project implements a complete ML pipeline including **Data Ingestion**, **Data Validation**, **Feature Engineering**, **Customer Segmentation**, **Model Training**, **Model Evaluation**, **AWS S3 Model Storage**, **MongoDB Atlas Integration**, **Docker Containerization**, and **Render Deployment**.
 
 ---
 
 ## 🚀 Live Demo
 
-🔗 **Application:**  
+🔗 **Live Application:**  
 https://customer-categorizer-h3e6.onrender.com/
 
-> **Note:** The application is hosted on Render's Free Tier. If inactive, the first request may take **45–60 seconds** while the server starts.
+> **Note:** This application is hosted on Render's Free Tier. If inactive, the first request may take **45–60 seconds** while the server starts.
 
 ---
 
-## 📌 Project Overview
+# 📌 Problem Statement
 
-Businesses collect a large amount of customer data but often struggle to identify meaningful customer groups.
+Businesses collect large amounts of customer data but often struggle to identify meaningful customer groups for personalized marketing.
 
-This project automatically segments customers into different categories using **unsupervised learning (K-Means Clustering)**. After generating cluster labels, a **Logistic Regression classifier** is trained to predict the customer category for new users without re-running the clustering algorithm.
+The objective of this project is to build an intelligent Machine Learning system that automatically segments customers based on their demographic and purchasing behavior. Once the customer groups are generated using clustering, a classification model predicts the appropriate customer segment for new customers.
 
-The system enables businesses to:
+This enables businesses to:
 
-- Identify similar customers
-- Build targeted marketing campaigns
-- Improve customer engagement
-- Personalize recommendations
-- Increase customer retention
+- Customer Segmentation
+- Targeted Marketing
+- Personalized Recommendations
+- Customer Retention
+- Better Business Decisions
 
 ---
 
@@ -37,43 +37,47 @@ The system enables businesses to:
 - Customer Segmentation using K-Means
 - Customer Category Prediction
 - Automated Data Validation
-- Feature Engineering Pipeline
+- Feature Engineering
 - Model Evaluation
 - AWS S3 Model Storage
 - MongoDB Atlas Integration
 - Dockerized Application
-- Responsive Flask Web Application
-- Easy Deployment on Render
+- Responsive Flask Web Interface
+- One-click Model Training
+- Real-time Customer Prediction
 
 ---
 
 # 🛠️ Tech Stack
 
-## Machine Learning
+### Programming Language
+
+- Python
+
+### Machine Learning
 
 - Scikit-learn
 - Pandas
 - NumPy
 
-## Backend
+### Backend
 
-- Python
 - Flask
 
-## Database
+### Database
 
 - MongoDB Atlas
 
-## Cloud
+### Cloud
 
 - AWS S3
 
-## Deployment
+### Deployment
 
 - Docker
 - Render
 
-## Version Control
+### Version Control
 
 - Git
 - GitHub
@@ -88,106 +92,101 @@ Customer-Categorizer/
 ├── app.py
 ├── Dockerfile
 ├── requirements.txt
+├── README.md
 ├── setup.py
+│
 ├── config/
+│
 ├── notebooks/
+│
 ├── src/
+│   ├── cloud_storage/
 │   ├── components/
 │   ├── configuration/
-│   ├── cloud_storage/
-│   ├── pipeline/
-│   ├── utils/
-│   ├── logger/
-│   ├── entity/
 │   ├── constant/
-│   └── exception/
+│   ├── data_access/
+│   ├── entity/
+│   ├── exception/
+│   ├── logger/
+│   ├── ml/
+│   ├── pipeline/
+│   └── utils/
 │
-├── templates/
 ├── static/
-└── README.md
+├── templates/
+└── flowchart/
 ```
 
 ---
 
-# 📊 Machine Learning Workflow
+# 🏗️ Project Architecture
 
-```
-Raw Dataset
-      │
-      ▼
-Data Ingestion
-      │
-      ▼
-Data Validation
-      │
-      ▼
-Feature Engineering
-      │
-      ▼
-K-Means Clustering
-      │
-      ▼
-Generate Cluster Labels
-      │
-      ▼
-Train Logistic Regression
-      │
-      ▼
-Model Evaluation
-      │
-      ▼
-AWS S3 Model Storage
-      │
-      ▼
-Prediction Pipeline
-      │
-      ▼
-Flask Web Application
-```
+> Place your architecture image inside the `flowchart/` folder.
+
+<p align="center">
+  <img src="flowchart/project_architecture.png" width="900">
+</p>
 
 ---
 
-# 📈 Machine Learning Models
+# 📥 Data Collection Architecture
 
-### Clustering Model
-
-- K-Means Clustering
-
-Purpose:
-
-- Discover hidden customer groups
-- Generate customer segment labels
+<p align="center">
+  <img src="flowchart/data_collection_architecture.png" width="900">
+</p>
 
 ---
 
-### Classification Model
+# ☁️ Deployment Architecture
 
-- Logistic Regression
+<p align="center">
+  <img src="flowchart/deployment_architecture.png" width="900">
+</p>
 
-Purpose:
+---
 
-- Predict customer segment for new customers
-- Fast inference without re-running clustering
+# 📊 Machine Learning Models
+
+## Customer Segmentation
+
+### K-Means Clustering
+
+Used to group customers with similar purchasing behavior into different clusters.
+
+---
+
+## Customer Prediction
+
+### Logistic Regression
+
+Used to predict the customer segment for new customer records without re-running the clustering algorithm.
+
+---
+
+## Hyperparameter Optimization
+
+- GridSearchCV
 
 ---
 
 # 📁 Dataset
 
-**Marketing Campaign Dataset**
+### Marketing Campaign Dataset
 
 Dataset Link:
 
 https://github.com/entbappy/Branching-tutorial/blob/master/marketing_campaign.zip
 
-The dataset contains customer information such as:
+### Dataset Features
 
 - Age
-- Income
 - Education
+- Income
 - Marital Status
-- Purchase History
+- Number of Purchases
 - Campaign Responses
-- Spending Behavior
+- Spending Behaviour
+- Customer Information
 
 ---
 
@@ -201,7 +200,7 @@ git clone https://github.com/CodeLeoX16/Customer-Categorizer.git
 
 ---
 
-## Move into Project
+## Move to Project Directory
 
 ```bash
 cd Customer-Categorizer
@@ -235,12 +234,12 @@ pip install -r requirements.txt
 
 # 🔐 Environment Variables
 
-Create a `.env` file and configure the following variables:
+Create a `.env` file and configure the following variables.
 
 ```env
-AWS_ACCESS_KEY_ID=YOUR_KEY
+AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
 
-AWS_SECRET_ACCESS_KEY=YOUR_SECRET
+AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
 
 AWS_DEFAULT_REGION=YOUR_REGION
 
@@ -249,13 +248,13 @@ MONGODB_URL=YOUR_MONGODB_CONNECTION_STRING
 
 ---
 
-# ▶️ Run Application
+# ▶️ Run the Application
 
 ```bash
 python app.py
 ```
 
-Open:
+Open your browser:
 
 ```
 http://localhost:5000/
@@ -263,7 +262,9 @@ http://localhost:5000/
 
 ---
 
-# 🏋️ Train the Model
+# 🚀 Train the Model
+
+Visit
 
 ```
 http://localhost:5000/train
@@ -275,20 +276,22 @@ The training pipeline performs:
 - Data Validation
 - Data Transformation
 - Feature Engineering
-- Clustering
-- Classification
-- Evaluation
+- Customer Clustering
+- Model Training
+- Model Evaluation
 - Model Upload to AWS S3
 
 ---
 
 # 🔍 Predict Customer Category
 
+Visit
+
 ```
 http://localhost:5000/predict
 ```
 
-Enter customer details through the web interface and receive the predicted customer segment.
+Fill in the customer details and the trained model predicts the customer's category.
 
 ---
 
@@ -315,7 +318,7 @@ docker run -p 5000:5000 customer-categorizer
 
 ---
 
-# ☁️ Cloud Services Used
+# ☁️ Cloud Services
 
 ## MongoDB Atlas
 
@@ -325,33 +328,37 @@ docker run -p 5000:5000 customer-categorizer
 
 - Stores trained models
 - Stores preprocessing objects
-- Enables model versioning
+- Model Versioning
 
 ---
 
-# 📷 Application Screenshots
+# 📸 Application Screenshots
 
-Add screenshots here after deployment.
+Create a folder named `screenshots/` and add images such as:
 
-Example:
-
-```
+```text
 screenshots/
 │
-├── Home.png
-├── Prediction.png
-├── Training.png
-└── Result.png
+├── home.png
+├── prediction.png
+├── result.png
+└── training.png
 ```
 
 Then display them:
 
 ```markdown
-![Home](screenshots/Home.png)
+## Home Page
 
-![Prediction](screenshots/Prediction.png)
+![Home](screenshots/home.png)
 
-![Result](screenshots/Result.png)
+## Prediction Page
+
+![Prediction](screenshots/prediction.png)
+
+## Prediction Result
+
+![Result](screenshots/result.png)
 ```
 
 ---
@@ -359,14 +366,13 @@ Then display them:
 # 🚀 Future Improvements
 
 - XGBoost Classifier
-- Random Forest Classifier
-- Model Monitoring
+- Random Forest
 - MLflow Integration
-- User Authentication
-- REST API Documentation
+- Explainable AI (SHAP)
+- CI/CD with GitHub Actions
 - Kubernetes Deployment
-- CI/CD Pipeline
-- Explainable AI using SHAP
+- REST API Documentation
+- User Authentication
 
 ---
 
@@ -376,18 +382,16 @@ Then display them:
 
 Computer Science Engineering Student
 
-GitHub:
+**GitHub**
 
 https://github.com/CodeLeoX16
 
-LinkedIn:
+**LinkedIn**
 
 https://www.linkedin.com/in/YOUR-LINKEDIN/
 
 ---
 
-# ⭐ If you found this project useful
+# ⭐ Support
 
-Please consider giving it a ⭐ on GitHub.
-
-It helps others discover the project and motivates further improvements.
+If you found this project helpful, please consider giving it a ⭐ on GitHub.
